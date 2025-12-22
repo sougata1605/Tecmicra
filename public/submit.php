@@ -1,11 +1,6 @@
 
 <?php
-require_once "../vendor/autoload.php";
-require "../config/Database.php";
-require "../classes/Validator.php";
-require "../classes/FileUploader.php";
-require "../classes/Contact.php";
-require "../classes/Mailer.php";
+
 
 $status  = "success";
 $message = "Thank you! Your request has been submitted successfully.";
@@ -57,7 +52,7 @@ include "partials/header.php";
                         <h4 class="mt-3">Submission Successful</h4>
 
                         <p class="text-muted">
-                            Thank you! Your request has been submitted successfully.
+                          <b>  Thank you <?php echo  ucwords($_POST['name'])  ?>  ! Your request has been submitted successfully. </b>
                         </p>
 
                         <a href="index.php" class="btn btn-success mt-3 px-4">

@@ -23,6 +23,16 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
+
+        .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
     </style>
 </head>
 <body>
@@ -34,3 +44,17 @@
         </span>
     </div>
 </nav>
+
+
+
+<?php   
+
+require_once "../vendor/autoload.php";
+require "../config/Database.php";
+require "../classes/Validator.php";
+require "../classes/FileUploader.php";
+require "../classes/Contact.php";
+require "../classes/Mailer.php";
+
+
+?>
