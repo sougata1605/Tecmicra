@@ -1,6 +1,6 @@
 
 <?php
-
+include "partials/header.php";
 
 $status  = "success";
 $message = "Thank you! Your request has been submitted successfully.";
@@ -35,7 +35,7 @@ try {
 }
 
 
-include "partials/header.php";
+
 ?>
 
 
