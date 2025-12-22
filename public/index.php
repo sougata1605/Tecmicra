@@ -14,7 +14,7 @@
 
                     <form id="contactForm" action="submit.php" method="POST" enctype="multipart/form-data" novalidate>
 
-                        <!-- Full Name -->
+                        
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input 
@@ -32,7 +32,7 @@
                             </div>
                         </div>
 
-                        <!-- Email -->
+                       
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
                             <input
@@ -47,7 +47,7 @@
                             </div>
                         </div>
 
-                        <!-- Mobile -->
+                       
                         <div class="mb-3">
                             <label class="form-label">Mobile Number</label>
                             <input
@@ -63,7 +63,7 @@
                             </div>
                         </div>
 
-                        <!-- Message -->
+                       
                         <div class="mb-3">
                             <label class="form-label">Message (Optional)</label>
                             <textarea
@@ -75,7 +75,7 @@
                             ></textarea>
                         </div>
 
-                        <!-- Image -->
+                       
                         <div class="mb-4">
                             <label class="form-label">Upload Image</label>
                             <input
@@ -90,7 +90,7 @@
                             </div>
                         </div>
 
-                        <!-- Submit -->
+                       
                         <div class="d-grid">
                             <button type="submit" id="submitBtn" class="btn btn-success btn-lg" disabled>
                                 <i class="bi bi-send-fill"></i> Submit Request
