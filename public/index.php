@@ -15,10 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $user = new User();
 
-       
+
 
         if ($user->login($username, $password)) {
-            header('Location: admin/dashboard.php');
+
+
+            header("Location: ../admin/dashboard.php");
             exit;
         } else {
             $error = "Invalid username or password!";
@@ -27,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (Session::isLoggedIn()) {
-    header('Location: admin/dashboard.php');
+
+    header("Location: ../admin/dashboard.php");
     exit;
 }
 
