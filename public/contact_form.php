@@ -1,4 +1,4 @@
-<?php include "partials/header.php"; ?>
+<?php include_once "partials/header.php"; ?>
 
 <div class="container py-5">
     <div class="row justify-content-center">

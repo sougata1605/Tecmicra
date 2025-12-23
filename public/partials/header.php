@@ -51,7 +51,7 @@
 <?php   
 
 require_once "../vendor/autoload.php";
-require "../config/Database.php";
+
 require "../classes/Validator.php";
 require "../classes/FileUploader.php";
 require "../classes/Contact.php";

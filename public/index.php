@@ -1,32 +1,37 @@
 <?php
- include "partials/header.php"; 
-
-// require_once '../classes/Session.php';
-
-
-// require_once '../classes/User.php';
+require_once __DIR__ . '/../classes/Session.php';
+require_once __DIR__ . '/../classes/User.php';
 
 Session::start();
 
-if(Session::isLoggedIn()) {
-    header('Location: dashboard.php');
-    exit;
-}
-
 $error = '';
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    $user = new User();
-    if($user->login($username, $password)) {
-        header('Location: dashboard.php');
-        exit;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
+
+    if ($username === '' || $password === '') {
+        $error = "Please fill in all fields.";
     } else {
-        $error = "Invalid username or password!";
+        $user = new User();
+
+       
+
+        if ($user->login($username, $password)) {
+            header('Location: contact_form.php');
+            exit;
+        } else {
+            $error = "Invalid username or password!";
+        }
     }
 }
 
+if (Session::isLoggedIn()) {
+    header('Location: contact_form.php');
+    exit;
+}
+
+include_once "partials/header.php";
 ?>
 
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
@@ -34,42 +39,29 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="card-body p-4">
             <h3 class="text-center mb-4 fw-bold">Admin Login</h3>
 
-            <form method="post">
+            <form method="post" action="">
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input 
-                        type="text" 
-                        name="username" 
-                        class="form-control" 
-                        placeholder="Enter username" 
-                        required>
+                    <input type="text" name="username" class="form-control" placeholder="Enter username" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input 
-                        type="password" 
-                        name="password" 
-                        class="form-control" 
-                        placeholder="Enter password" 
-                        required>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
                 </div>
 
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-success">
-                        Login
-                    </button>
+                    <button type="submit" class="btn btn-success">Login</button>
                 </div>
             </form>
 
-            <?php if($error): ?>
+            <?php if ($error): ?>
                 <div class="alert alert-danger mt-3 text-center">
-                    <?= $error ?>
+                    <?= htmlspecialchars($error) ?>
                 </div>
             <?php endif; ?>
         </div>
     </div>
 </div>
 
-<?php include "partials/footer.php"; ?>
-
+<?php include_once "partials/footer.php"; ?>
