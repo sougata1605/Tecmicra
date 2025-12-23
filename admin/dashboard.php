@@ -48,29 +48,29 @@ $inquiries = $contact->getAll();
                 </thead>
 
                 <tbody>
-                <?php if (!empty($inquiries)):
-                    $i=1; 
-                    
+                    <?php if (!empty($inquiries)):
+                        $i = 1;
+
                     ?>
-                    <?php foreach ($inquiries as $row): ?>
+                        <?php foreach ($inquiries as $row): ?>
+                            <tr>
+                                <td><?php echo $i++;  ?></td>
+                                <td>
+                                    <img src="../uploads/<?= htmlspecialchars($row['image']) ?>"
+                                        width="60" height="60"
+                                        style="object-fit:cover;border-radius:6px;">
+                                </td>
+                                <td><?= htmlspecialchars($row['name']) ?></td>
+                                <td><?= htmlspecialchars($row['email']) ?></td>
+                                <td><?= htmlspecialchars($row['mobile']) ?></td>
+                                <td><?= htmlspecialchars($row['message']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
                         <tr>
-                            <td><?php echo $i++;  ?></td>
-                            <td>
-                                <img src="../uploads/<?= htmlspecialchars($row['image']) ?>"
-                                     width="60" height="60"
-                                     style="object-fit:cover;border-radius:6px;">
-                            </td>
-                            <td><?= htmlspecialchars($row['name']) ?></td>
-                            <td><?= htmlspecialchars($row['email']) ?></td>
-                            <td><?= htmlspecialchars($row['mobile']) ?></td>
-                            <td><?= htmlspecialchars($row['message']) ?></td>
+                            <td colspan="6" class="text-center">No inquiries found</td>
                         </tr>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr>
-                        <td colspan="6" class="text-center">No inquiries found</td>
-                    </tr>
-                <?php endif; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>

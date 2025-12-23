@@ -75,7 +75,7 @@ include_once "partials/header.php";
 
             <div class="text-center mt-3">
                 <a href="index.php">Already have an account? Login</a>
-                 
+
 
             </div>
         </div>
