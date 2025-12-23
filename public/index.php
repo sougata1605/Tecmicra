@@ -44,7 +44,7 @@ include_once "partials/header.php";
 
             <form method="post" action="">
                 <div class="mb-3">
-                    <label class="form-label">Username</label>
+                    <label class="form-label">UserEmail </label>
                     <input type="text" name="username" class="form-control" placeholder="Enter username" required>
                 </div>
 
@@ -57,6 +57,8 @@ include_once "partials/header.php";
                     <button type="submit" class="btn btn-success">Login</button>
                 </div>
             </form>
+
+            <a href="register.php">Donot  have an account? Register</a>
 
             <?php if ($error): ?>
                 <div class="alert alert-danger mt-3 text-center">

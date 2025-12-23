@@ -48,10 +48,13 @@ $inquiries = $contact->getAll();
                 </thead>
 
                 <tbody>
-                <?php if (!empty($inquiries)): ?>
+                <?php if (!empty($inquiries)):
+                    $i=1; 
+                    
+                    ?>
                     <?php foreach ($inquiries as $row): ?>
                         <tr>
-                            <td><?php $i=1; echo $i++;  ?></td>
+                            <td><?php echo $i++;  ?></td>
                             <td>
                                 <img src="../uploads/<?= htmlspecialchars($row['image']) ?>"
                                      width="60" height="60"

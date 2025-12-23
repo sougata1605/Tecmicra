@@ -42,8 +42,8 @@ include_once "partials/header.php";
 
             <form method="post">
                 <div class="mb-3">
-                    <label class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control" required>
+                    <label class="form-label">UserEmail</label>
+                    <input type="email" name="username" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
@@ -57,7 +57,7 @@ include_once "partials/header.php";
                 </div>
 
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-success">Register</button>
                 </div>
             </form>
 
@@ -75,6 +75,8 @@ include_once "partials/header.php";
 
             <div class="text-center mt-3">
                 <a href="index.php">Already have an account? Login</a>
+                 
+
             </div>
         </div>
     </div>

@@ -55,7 +55,11 @@ try {
                           <b>  Thank you <?php echo  ucwords($_POST['name'])  ?>! Your request has been submitted successfully. </b>
                         </p>
 
-                        <a href="contact_form.php" class="btn btn-success mt-3 px-4">
+                        <a href="../admin\dashboard.php" class="btn btn-success mt-3 px-4">
+
+                       
+
+
                             ← Back to Form
                         </a>
 
