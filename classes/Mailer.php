@@ -17,7 +17,7 @@ class Mailer {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            $mail->setFrom("bvgdocument@gmail.com", "Tecmicra Team");
+            $mail->setFrom("bvgdocument@gmail.com", "MIS Team ");
             $mail->addAddress($to, $name);
 
             $mail->Subject = "Form Submission Received";
