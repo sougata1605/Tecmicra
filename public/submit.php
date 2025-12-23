@@ -1,6 +1,6 @@
 
 <?php
-include "partials/header.php";
+include_once "partials/header.php";
 
 $status  = "success";
 $message = "Thank you! Your request has been submitted successfully.";
@@ -67,4 +67,4 @@ try {
     </div>
 </main>
 
-<?php include "partials/footer.php"; ?>
+<?php include_once "partials/footer.php"; ?>

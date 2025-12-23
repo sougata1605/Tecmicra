@@ -51,14 +51,10 @@
 <?php   
 
 require_once "../vendor/autoload.php";
-
-require "../classes/Validator.php";
-require "../classes/FileUploader.php";
-require "../classes/Contact.php";
-require "../classes/Mailer.php";
-
-
-
+require_once "../classes/Validator.php";
+require_once "../classes/FileUploader.php";
+require_once "../classes/Contact.php";
+require_once "../classes/Mailer.php";
 require_once '../classes/Session.php';
 require_once '../classes/User.php';
 
