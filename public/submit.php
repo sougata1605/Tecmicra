@@ -52,7 +52,7 @@ try {
                         <h4 class="mt-3">Submission Successful</h4>
 
                         <p class="text-muted">
-                          <b>  Thank you <?php echo  ucwords($_POST['name'])  ?>  ! Your request has been submitted successfully. </b>
+                          <b>  Thank you <?php echo  ucwords($_POST['name'])  ?>! Your request has been submitted successfully. </b>
                         </p>
 
                         <a href="contact_form.php" class="btn btn-success mt-3 px-4">
