@@ -56,9 +56,17 @@ $inquiries = $contact->getAll();
                             <tr>
                                 <td><?php echo $i++;  ?></td>
                                 <td>
-                                    <img src="../uploads/<?= htmlspecialchars($row['image']) ?>"
+                                    <?php
+                                    $imagePath = '../uploads/' . $row['image'];
+                                    if (!file_exists($imagePath) || empty($row['image'])) {
+                                        $imagePath = '../uploads/default.jpg';
+                                    }  ?>
+
+                                    <img src="<?= htmlspecialchars($imagePath) ?>"
                                         width="60" height="60"
-                                        style="object-fit:cover;border-radius:6px;">
+                                        style="object-fit:cover; border-radius:6px;">
+
+
                                 </td>
                                 <td><?= htmlspecialchars($row['name']) ?></td>
                                 <td><?= htmlspecialchars($row['email']) ?></td>
