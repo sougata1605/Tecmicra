@@ -1,4 +1,11 @@
-
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 26, 2025 at 11:32 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,8 +38,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(2, 'chatterjee2014@gmail.com', '$2y$10$/4fU4VRIZnqDeTXFSF7XdeXNDYBUN1sjpy1NZpJ2tk4mYJzUL/lbK'),
-(3, 'sonikachauhan@gmail.com', '$2y$10$cBac2Up0eSVcbQlhacpVluLSEd4z6z97A7owba6stwKqZMoOuhj1K');
+(1, 'chatterjee2014@gmail.com', '$2y$10$wYiqlENH0GeIf3B.EJrjYeYAC/XIlkkwwtYHjPyiybQzrcQdUF7b6');
 
 -- --------------------------------------------------------
 
@@ -55,13 +61,13 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `mobile`, `message`, `image`, `created_at`) VALUES
-(31, 'pronobendu', 'sougatastore16@gmail.com', '9062983118', 'header(\"Location: ../admin/dashboard.php\");\r\nexit;', '694a6f6917e1e.jpg', '2025-12-23 10:31:05'),
-(32, 'pronobendu', 'sougatacode@gmail.com', '9062983118', 'code --install-extension bmewburn.vscode-intelephense-client\r\ncode --install-extension xdebug.php-debug\r\ncode --install-extension neilbrayfield.php-docblocker\r\ncode --install-extension christian-kohler.path-intellisense\r\ncode --install-extension cweijan.vscode-mysql-client2\r\ncode --install-extension HansUXdev.bootstrap5-snippets', '694a70b83d643.jpg', '2025-12-23 10:36:40'),
-(33, 'pronobendu', 'sougatastore16@gmail.com', '9062983118', ' <a href=\"contact_form.php\" class=\"btn btn-success mt-3 px-4\">\r\n                            ← Back to Form\r\n                        </a>', '694a71f1c8b58.jpg', '2025-12-23 10:41:53'),
-(34, 'pronobendu', 'sougatacode@gmail.com', '9062983118', ' <a href=\"contact_form.php\" class=\"btn btn-success mt-3 px-4\">\r\n                            ← Back to Form\r\n                        </a>', '694a729590be2.jpg', '2025-12-23 10:44:37'),
-(35, 'pronobendu', 'sougatacode@gmail.com', '9062983118', ' <a href=\"contact_form.php\" class=\"btn btn-success mt-3 px-4\">\r\n                            ← Back to Form\r\n                        </a>', '694a73507439e.jpg', '2025-12-23 10:47:44'),
-(36, 'pronobendu', 'sougatacode@gmail.com', '9062983118', 'admin\\dashboard.php', '694a736ebebec.jpg', '2025-12-23 10:48:14'),
-(37, 'pronobendu', 'sougatastore16@gmail.com', '9062983118', 'Mobile Number', '694a7568d4398.jpg', '2025-12-23 10:56:40');
+(1, 'suman bera', 'Souman.bera@intglobal.com', '9062983118', 'Souman.bera@intglobal.com', '694b8b79c69fa.jpg', '2025-12-24 06:43:05'),
+(2, 'suman bera', 'sougatacode@gmail.com', '9062983118', 'Smriti Gautam', '694b9224bbe14.jpg', '2025-12-24 07:11:32'),
+(3, 'suman bera', 'sougatacode@gmail.com', '9062983118', 'Smriti Gautam', '694b922773b26.jpg', '2025-12-24 07:11:35'),
+(4, 'Afrin Sumona', 'contact.afrinsumona@gmail.com', '9062983118', ' contact.afrinsumona@gmail.com', '694b9cb9a2d9b.jpg', '2025-12-24 07:56:41'),
+(5, 'Afrin Sumona', 'contact.afrinsumona@gmail.com', '9062983118', ' contact.afrinsumona@gmail.com', '694b9cbdcb1c3.jpg', '2025-12-24 07:56:45'),
+(6, 'pronobendu', 'sougatacode@gmail.com', '9062983118', 'test', '694e2adc49818.jpg', '2025-12-26 06:27:40'),
+(7, 'pronobendu', 'sougatacode@gmail.com', '7899999788', '', '694e2b674d0a8.jpg', '2025-12-26 06:29:59');
 
 --
 -- Indexes for dumped tables
@@ -87,13 +93,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
